@@ -11,23 +11,6 @@ This repository documents my progress through the **Junior Penetration Tester (J
 * Develop skills required for **SOC Analyst / Junior Pentester roles**
 * Maintain organized notes for revision and portfolio use
 
----
-
-## 📂 Repository Structure
-
-```
-JPT/
-│
-├── Recon/
-├── Enumeration/
-├── Web/
-├── Exploitation/
-├── PrivEsc/
-├── Tools/
-└── Notes/
-```
-
----
 
 ## 🔍 Topics Covered
 
@@ -55,6 +38,11 @@ JPT/
 * Vulnerability exploitation basics
 * Reverse shells
 * Payload generation
+
+### Metasploit
+  * Intro
+  * Exploitation
+  * Meterpreter
 
 ### 🔐 Privilege Escalation
 
