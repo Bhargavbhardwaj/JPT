@@ -1,6 +1,102 @@
-Active reconnaissance requires you to make some kind of contact with your target. This contact can be a phone call or a visit to the target company under some pretence to gather more information, usually as part of social engineering. Alternatively, it can be a direct connection to the target system, whether visiting their website or checking if their firewall has an SSH port open. Think of it like you are closely inspecting windows and door locks. Hence, it is essential to remember not to engage in active reconnaissance work before getting signed legal authorization from the client.
+# 🔍 Active Reconnaissance - TryHackMe Notes## 
 
+📌 Overview:
 
-In this room, we focus on active reconnaissance. Active reconnaissance begins with direct connections made to the target machine. Any such connection might leave information in the logs showing the client IP address, time of the connection, and duration of the connection, among other things. However, not all connections are suspicious. It is possible to let your active reconnaissance appear as regular client activity. Consider web browsing; no one would suspect a browser connected to a target web server among hundreds of other legitimate users. You can use such techniques to your advantage when working as part of the red team (attackers) and don’t want to alarm the blue team (defenders).
+In this room, we move from **Passive Reconnaissance** to **Active Reconnaissance**.- **Passive Reconnaissance**: Gathering information without interacting with the target.- **Active Reconnaissance**: Directly interacting with the target system.> 
 
-In this room, we go through various tools commonly bundled with most operating systems or easily obtainable. We begin with the web browser and its built-in developer tools; furthermore, we show you how a web browser can be “armed” to become an efficient reconnaissance framework. Afterwards, we discuss other benign tools such as ping, traceroute, and telnet. All these programs require connection to the target, and hence our activities would fall under active reconnaissance.
+⚠️ Important: Active reconnaissance requires **legal authorization**, as it involves direct contact with the target and can leave logs.---## ⚡ What is Active Reconnaissance?Active reconnaissance involves:- Making **direct connections** to target systems- Interacting with services (web servers, ports, etc.)- Collecting information that may be logged by the target### 
+
+🧠 Key InsightEvery interaction can leave traces such as:- IP address- Timestamp- Duration of connectionHowever, some actions (like browsing a website) may appear as **normal user activity**, which can help avoid detection.---## 🛠️ Tools Covered### 1. 🌐 Web Browser + Developer Tools- Inspect network traffic- Analyze requests/responses- View source code- Identify APIs and endpoints> Browsers can be "armed" into powerful reconnaissance tools.---### 2. 📡 Ping**Purpose**: Check if a host is reachable```bashping` 
+
+**What it reveals:**
+
+*   Host availability
+    
+*   Round-trip time (latency)
+    
+
+### 3\. 🧭 Traceroute
+
+**Purpose**: Trace the path packets take to reach the target
+
+`   traceroute    # Linuxtracert       # Windows   `
+
+**What it reveals:**
+
+*   Network path (routers/hops)
+    
+*   Network delays
+    
+*   Infrastructure layout
+    
+
+### 4\. 🔌 Telnet
+
+**Purpose**: Connect to a remote service on a specific port
+
+`telnet`  
+
+**What it reveals:**
+
+*   Open ports
+    
+*   Service behavior
+    
+*   Banner information (sometimes)
+    
+
+### 5\. 🧰 Netcat (nc)
+
+**Purpose**: Versatile networking tool for communication and testing
+
+`nc`  
+
+**Capabilities:**
+
+*   Port scanning
+    
+*   Banner grabbing
+    
+*   File transfer
+    
+*   Reverse shells (advanced use)
+    
+
+🔬 Practical Labs
+-----------------
+
+In this room, hands-on labs help reinforce:
+
+*   Using tools in real scenarios
+    
+*   Observing system responses
+    
+*   Understanding network behavior
+    
+
+🔐 Key Takeaways
+----------------
+
+*   Active reconnaissance involves **direct engagement** with the target.
+    
+*   It is **detectable** and leaves logs.
+    
+*   Always ensure **legal permission** before performing it.
+    
+*   Simple tools can provide **valuable insights** into systems and networks.
+    
+*   Blending in with normal traffic (e.g., web browsing) can reduce suspicion.
+    
+
+🚀 Learning Outcome
+-------------------
+
+After completing this room, you should be able to:
+
+*   Understand the difference between passive and active recon
+    
+*   Use basic networking tools effectively
+    
+*   Analyze network paths and services
+    
+*   Perform reconnaissance responsibly and legally
